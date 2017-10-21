@@ -1,0 +1,27 @@
+Possible order of development
+
+1. Movement
+	- Base Map
+	- Running
+	- Jumping
+
+2. Knockback/Death Conditions
+	- Knockback Mechanics
+	- Conditions for death (e.g. z-position is below a certain number)
+
+3. Different Guns and Projectiles
+	- Beams, Shotgun , Rockets
+
+4. Networking
+
+
+5. Win Conditions
+	- e.g. Most KOs when time is up.
+
+Polish
+0. Balancing
+1. Character Models
+2. HUD/ Different, zoomed-in view when aiming
+3. Different Maps
+4. Different Modes
+5. Visual effects
