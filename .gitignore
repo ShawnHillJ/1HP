@@ -29,3 +29,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Remove the log files from test builds
+**/output_log.txt
