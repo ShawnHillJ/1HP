@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class playerShoot : MonoBehaviour {
 
     GameObject guntip = null;
+    public bool playerIsAlive;
     public GameObject bulletPrefab;
     public GameObject bulletPrefab2;
     public Transform bulletSpawnPoint;
@@ -27,6 +28,7 @@ public class playerShoot : MonoBehaviour {
     bool secondaryIsDown;
 	// Use this for initialization
 	void Start () {
+        playerIsAlive = true;
         sounds = gameObject.GetComponent<AudioSource>();
         slider = GameObject.Find("ammoSlider");
         primaryLoader = GameObject.Find("primary");
@@ -61,7 +63,7 @@ public class playerShoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && playerIsAlive == true)
         {
             secondaryIsDown = true;
         }
@@ -71,7 +73,7 @@ public class playerShoot : MonoBehaviour {
         }
 
 
-        if (Input.GetMouseButtonDown(0) && primaryTimer == 1) 
+        if (Input.GetMouseButtonDown(0) && primaryTimer == 1 && playerIsAlive == true) 
         {
             sounds.clip = sound1;
             sounds.Play();
@@ -80,7 +82,7 @@ public class playerShoot : MonoBehaviour {
             reload(primaryLoader);
         }
 
-        if (secondaryIsDown == true && secondaryTimer == 1)
+        if (secondaryIsDown == true && secondaryTimer == 1 && playerIsAlive == true)
         {
             sounds.clip = sound2;
             sounds.Play();
